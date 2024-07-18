@@ -10,11 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping()
 public class PersonaController {
 
-    @GetMapping("/")
-    public String index() {
-        return "Bienvenido a la página de estudiantes";
-    }
-
     @GetMapping("/estudiante/{nombre}/{apellido}/{edad}")
     public Persona getPersona(@PathVariable String nombre,
                               @PathVariable String apellido,
